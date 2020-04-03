@@ -10,9 +10,10 @@ import Signup from './signup';
 const routing = (
   <Router>
     <div>
-      <Route path="/" component={App} />
-      <Route path="/login" component={Login} />
-      <Route path="/signup" component={Signup} />
+      <Route exact path="" component={Login} />
+      <Route exact path="login" component={Login} />
+      {/* <Route path="/signup" component={Signup} /> */}
+      <Route exact path={'signup'} component={Signup} />
     </div>
   </Router>
 )
