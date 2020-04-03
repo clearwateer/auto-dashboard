@@ -7,19 +7,6 @@ import * as serviceWorker from './serviceWorker';
 import Login from './login';
 import Signup from './signup';
 
-<<<<<<< HEAD
-const routing = (
-  <Router>
-    <div>
-      <Route exact path="" component={Login} />
-      <Route exact path="login" component={Login} />
-      {/* <Route path="/signup" component={Signup} /> */}
-      <Route exact path={'signup'} component={Signup} />
-    </div>
-  </Router>
-)
-ReactDOM.render(routing, document.getElementById('root'))
-=======
 ReactDOM.render((
   <BrowserRouter>
      <Route path = "/" component = {Login} />
@@ -29,7 +16,7 @@ ReactDOM.render((
 ), 
   document.getElementById('root')
 );
->>>>>>> 0eeb0e5cf84b01ad1c98bfb144fe7315bbe7bf06
+
 // ReactDOM.render(
 //   <React.StrictMode>
 //     <App />
