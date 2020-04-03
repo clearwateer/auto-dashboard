@@ -26,89 +26,39 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import Container from '@material-ui/core/Container';
 
+class Login extends React.Component {
 
+  
+  render() {
 
-function Copyright() {
-
-  return (
-
-    <Typography variant="body2" color="textSecondary" align="center">
-
-      {'Copyright © '}
-
-      <Link color="inherit" href="https://material-ui.com/">
-
-        Your Website
-
-      </Link>{' '}
-
-      {new Date().getFullYear()}
-
-      {'.'}
-
-    </Typography>
-
-  );
-
-}
-
-
-
-const useStyles = makeStyles((theme) => ({
-
-  paper: {
-
-    marginTop: theme.spacing(8),
-
-    display: 'flex',
-
-    flexDirection: 'column',
-
-    alignItems: 'center',
-
-  },
-
-  avatar: {
-
-    margin: theme.spacing(1),
-
-    backgroundColor: theme.palette.secondary.main,
-
-  },
-
-  form: {
-
-    width: '100%', // Fix IE 11 issue.
-
-    marginTop: theme.spacing(1),
-
-  },
-
-  submit: {
-
-    margin: theme.spacing(3, 0, 2),
-
-  },
-
-}));
-
-
-
-export default function SignIn() {
-
-  const classes = useStyles();
-
-
-
-  return (
-
-    <Container component="main" maxWidth="xs">
+    const useStyles = makeStyles((theme) => ({
+      paper: {
+        marginTop: theme.spacing(8),
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      },
+      avatar: {
+        margin: theme.spacing(1),
+        backgroundColor: theme.palette.secondary.main,
+      },
+      form: {
+        width: '100%', // Fix IE 11 issue.
+        marginTop: theme.spacing(1),
+      },
+      submit: {
+        margin: theme.spacing(3, 0, 2),
+      },
+    }));
+  
+    return (
+      <Container component="login" maxWidth="xs">
 
       <CssBaseline />
 
-      <div className={classes.paper}>
+      <div className={useStyles.paper}>
 
-        <Avatar className={classes.avatar}>
+        <Avatar className={useStyles.avatar}>
 
           <LockOutlinedIcon />
 
@@ -120,7 +70,7 @@ export default function SignIn() {
 
         </Typography>
 
-        <form className={classes.form} noValidate>
+        <form className={useStyles.form} noValidate>
 
           <TextField
 
@@ -184,7 +134,7 @@ export default function SignIn() {
 
             color="primary"
 
-            className={classes.submit}
+            className={useStyles.submit}
 
           >
 
@@ -220,14 +170,10 @@ export default function SignIn() {
 
       </div>
 
-      <Box mt={8}>
-
-        <Copyright />
-
-      </Box>
-
     </Container>
-
-  );
-
+    )
+  }
 }
+
+export default Login;
+
