@@ -5,11 +5,13 @@ import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import Login from './login';
 import App from './App';
+import Dashboard from './Dashboard/dashboard';
 import Signup from './signup';
 
 const routing = (
   <Router>
     <div>
+      <Route path="/dashboard" component={Dashboard} />
       <Route path="/" component={App} />
       <Route path="/login" component={Login} />
       <Route path="/signup" component={Signup} />

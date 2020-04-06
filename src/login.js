@@ -26,6 +26,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import Container from '@material-ui/core/Container';
 
+import history from './history';
+
 
 
 function Copyright() {
@@ -179,6 +181,8 @@ export default function SignIn() {
             color="primary"
 
             className={classes.submit}
+
+            onClick={() => history.push('/Dashboard')}
 
           >
 
