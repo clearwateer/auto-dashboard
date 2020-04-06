@@ -4,12 +4,13 @@ import './index.css';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import Login from './login';
+import App from './App';
 import Signup from './signup';
 
 const routing = (
   <Router>
     <div>
-      <Route path="/" component={Login} />
+      <Route path="/" component={App} />
       <Route path="/login" component={Login} />
       <Route path="/signup" component={Signup} />
     </div>
