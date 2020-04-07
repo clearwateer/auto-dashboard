@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Router, Switch, Route } from "react-router-dom";
-
-import Dashboard from "./Dashboard/dashboard";
+import Login from "./login";
 
 
 export default class Routes extends Component {
@@ -9,8 +8,8 @@ export default class Routes extends Component {
         return (
             <Router history={history}>
                 <Switch>
-                    <Route path="/" exact component={Login} />
-                    <Route path="/Dashboard" component={Dashboard} />
+                    <Route path="/dashboard" exact component={Dashboard} />
+                    <Route path="/login" component={Login} />
                 </Switch>
             </Router>
         )
