@@ -2,36 +2,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'; 
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { 
-  MatTableModule, 
-  MatDialogModule, 
-  MatFormFieldModule,
-  MatInputModule,
-  MatButtonModule,
-  MatSelectModule,
-  MatRadioModule,
-  MatMenuModule,
-  MatIconModule,
-  MatListModule,
-  MatTreeModule,
-  MatCardModule,
-  MatTabsModule,
-  MatSidenavModule
-} from '@angular/material';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MaterialUiModule} from './material-ui/material-ui.module'; 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { NavComponent } from './layout/nav/nav.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    NavComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -39,22 +28,9 @@ import { RegisterComponent } from './pages/register/register.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
     HttpClientModule,
-    MatTableModule, 
-    MatDialogModule, 
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatRadioModule,
-    MatMenuModule,
-    MatIconModule,
-    MatListModule,
-    MatTreeModule,
-    MatCardModule,
-    MatTabsModule,
-    MatSidenavModule,
-    MatToolbarModule
+    MaterialUiModule
   ],
   providers: [],
   bootstrap: [AppComponent]
